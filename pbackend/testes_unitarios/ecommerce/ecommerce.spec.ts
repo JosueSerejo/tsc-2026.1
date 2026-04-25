@@ -31,14 +31,6 @@ it('Deve ser aplicado o cupom de -50 reais', () => {
     expect(valorFinal).toBe(250)
 });
 
-it('Não deve ser aplicado cupom caso seja inválido', () => {
-    const pedido =  {valorTotal: 200, distanciaKm: 0, cupom:'QUERO5'};
-
-    const valorFinal = processarPagamento(pedido);
-
-    expect(valorFinal).toBe(200);
-}); 
-
 it('Deve aplicar a taxa de entrega', () => {
     const pedido = {valorTotal: 500, distanciaKm: 10};
 
@@ -69,5 +61,12 @@ it('Deve lançar erro para distância negativa', () => {
     expect(() => processarPagamento(pedido)).toThrow("A distância de entrega não pode ser negativa.");
   });
 
+
+it('Deve levantar erro caso o cupom seja inválido', () => {
+    const pedido =  {valorTotal: 200, distanciaKm: 0, cupom:'QUERO5'};
+
+    expect(() => processarPagamento(pedido)).toThrow("Cupom inválido: formato incorreto");
+
+  });
 
 });
