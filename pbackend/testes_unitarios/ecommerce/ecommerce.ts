@@ -5,6 +5,18 @@ interface Pedido {
 }
 
 export function processarPagamento(pedido: Pedido): number {
+  if (pedido.valorTotal < 0) {
+    throw new Error("O valor total do pedido não pode ser negativo.");
+  }
+
+  if (pedido.distanciaKm < 0) {
+    throw new Error("A distância de entrega não pode ser negativa.");
+  }
+
+  if (pedido.cupom !== undefined && typeof pedido.cupom !== 'string') {
+    throw new Error("Cupom inválido: formato incorreto.");
+  }
+
   let valorFinal = pedido.valorTotal;
 
   // Regra 1: Desconto de 10% para compras acima de 500 reais
@@ -14,6 +26,9 @@ export function processarPagamento(pedido: Pedido): number {
 
   // Regra 2: Cupom fixo de 50 reais
   if (pedido.cupom === 'QUERO50') {
+    if (valorFinal < 50) {
+        throw new Error("O valor do pedido é insuficiente para aplicar este cupom.");
+    }
     valorFinal -= 50;
   }
 
