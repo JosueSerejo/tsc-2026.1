@@ -31,6 +31,13 @@ it('Deve ser aplicado o cupom de -50 reais', () => {
     expect(valorFinal).toBe(250)
 });
 
+it('O cupom não deve ser aplicado caso seja inválido', () => {
+    const pedido =  {valorTotal: 200, distanciaKm: 0, cupom:'QUERO5'};
+
+    const valorFinal = processarPagamento(pedido);
+
+    expect(valorFinal).toBe(200);
+}); 
 
 
 
