@@ -13,7 +13,7 @@ it('Deve aplicar 10% de desconto para pagamentos acima de 500', () => {
 
 });
 
-it('O valor da compra não apresenta desconto', () => {
+it('Não deve apresenta desconto na compra', () => {
     const pedido = {valorTotal: 400, distanciaKm: 0};
 
     const valorFinal = processarPagamento(pedido);
@@ -31,7 +31,7 @@ it('Deve ser aplicado o cupom de -50 reais', () => {
     expect(valorFinal).toBe(250)
 });
 
-it('O cupom não deve ser aplicado caso seja inválido', () => {
+it('Não deve ser aplicado cupom caso seja inválido', () => {
     const pedido =  {valorTotal: 200, distanciaKm: 0, cupom:'QUERO5'};
 
     const valorFinal = processarPagamento(pedido);
@@ -39,12 +39,23 @@ it('O cupom não deve ser aplicado caso seja inválido', () => {
     expect(valorFinal).toBe(200);
 }); 
 
-it('A taxa de entrega será aplicada', () => {
+it('Deve aplicar a taxa de entrega', () => {
     const pedido = {valorTotal: 500, distanciaKm: 10};
 
     const valorFinal = processarPagamento(pedido);
 
     expect(valorFinal).toBe(520);
+
+});
+
+it('Deve aplicar taxa de entrega e cupons aplicados', () => {
+    const pedido = {valorTotal: 1000, distanciaKm: 10, cupom: 'QUERO50'};
+
+    const valorFinal = processarPagamento(pedido);
+
+    expect(valorFinal).toBe(870)
+
+
 
 });
 
