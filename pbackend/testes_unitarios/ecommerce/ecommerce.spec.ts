@@ -63,5 +63,11 @@ it('Deve lançar erro para valor negativo', () => {
     expect(() => processarPagamento(pedido)).toThrow("O valor total do pedido não pode ser negativo.");
   });
 
+it('Deve lançar erro para distância negativa', () => {
+    const pedido = {valorTotal: 50, distanciaKm: -40};
+
+    expect(() => processarPagamento(pedido)).toThrow("A distância de entrega não pode ser negativa.");
+  });
+
 
 });
