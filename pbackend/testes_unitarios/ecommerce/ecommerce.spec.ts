@@ -23,5 +23,15 @@ it('O valor da compra não apresenta desconto', () => {
 
 })
 
+it('Deve ser aplicado o cupom de -50 reais', () => {
+    const pedido = {valorTotal: 300, distanciaKm: 0, cupom:'QUERO50'};
+
+    const valorFinal = processarPagamento(pedido);
+
+    expect(valorFinal).toBe(250)
+});
+
+
+
 
 });
