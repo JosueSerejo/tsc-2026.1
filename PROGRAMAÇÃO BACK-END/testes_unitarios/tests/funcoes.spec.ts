@@ -1,5 +1,5 @@
 import {describe, it, expect} from 'vitest';
-import { validarEmail } from './funcoes';
+import { validarEmail } from '../src/funcoes';
 
 describe('Validador de E-mail', () => {
   // Os testes entrarão aqui
