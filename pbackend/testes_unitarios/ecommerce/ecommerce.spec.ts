@@ -1,7 +1,7 @@
 import {describe, it, expect} from 'vitest';
 import { processarPagamento } from './ecommerce';
 
-describe('processarPagamento', () => {
+describe('processarPagamento - validações e erros', () => {
 
 
 it('Deve aplicar 10% de desconto para pagamentos acima de 500', () => {
@@ -54,9 +54,14 @@ it('Deve aplicar taxa de entrega e cupons aplicados', () => {
     const valorFinal = processarPagamento(pedido);
 
     expect(valorFinal).toBe(870)
-
-
-
 });
+
+
+it('Deve lançar erro para valor negativo', () => {
+    const pedido = {valorTotal: -50, distanciaKm: 0};
+
+    expect(() => processarPagamento(pedido)).toThrow("O valor total do pedido não pode ser negativo.");
+  });
+
 
 });
