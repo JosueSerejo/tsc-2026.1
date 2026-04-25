@@ -39,6 +39,13 @@ it('O cupom não deve ser aplicado caso seja inválido', () => {
     expect(valorFinal).toBe(200);
 }); 
 
+it('A taxa de entrega será aplicada', () => {
+    const pedido = {valorTotal: 500, distanciaKm: 10};
 
+    const valorFinal = processarPagamento(pedido);
+
+    expect(valorFinal).toBe(520);
+
+});
 
 });
