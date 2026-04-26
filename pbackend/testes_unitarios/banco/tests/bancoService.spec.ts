@@ -1,3 +1,3 @@
-import {describe, it, expect} from 'vitest';
+import {describe, it, expect, beforeEach} from 'vitest';
 import { BancoService } from '../src/bancoService';
 
