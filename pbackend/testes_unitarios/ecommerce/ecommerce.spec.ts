@@ -69,4 +69,11 @@ it('Deve levantar erro caso o cupom seja inválido', () => {
 
   });
 
+it('Deve levantar erro caso o valor do produto seja menor que o cupom', () => {
+    const pedido = {valorTotal: 30, distanciaKm: 0, cupom: 'QUERO50'};
+
+    expect(() => processarPagamento(pedido)).toThrow("O valor do pedido é insuficiente para aplicar este cupom.");
+
+});
+
 });
