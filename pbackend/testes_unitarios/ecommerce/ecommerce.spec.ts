@@ -1,7 +1,7 @@
 import {describe, it, expect} from 'vitest';
 import { processarPagamento } from './ecommerce';
 
-describe('processarPagamento - validações e erros', () => {
+describe('processarPagamento - validações', () => {
 
 
 it('Deve aplicar 10% de desconto para pagamentos acima de 500', () => {
@@ -48,6 +48,9 @@ it('Deve aplicar taxa de entrega e cupons aplicados', () => {
     expect(valorFinal).toBe(870)
 });
 
+});
+
+describe('processarPagamento - erros', () => {
 
 it('Deve lançar erro para valor negativo', () => {
     const pedido = {valorTotal: -50, distanciaKm: 0};
