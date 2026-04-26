@@ -30,6 +30,25 @@ describe('ContaBancaria', () => {
 
     });
 
+    it('Deve transferir valor entre duas contas', () => { 
+        const conta2 = new ContaBancaria('12365', 'Maria Silva', 1000);
+        conta.transferir(200, conta2);
+        expect(conta.consultarSaldo()).toBe(800);
+        expect(conta2.consultarSaldo()).toBe(1200);
+    });
+
+
+    it('Deve transferir valor entre três contas', () => { 
+        const conta2 = new ContaBancaria('12365', 'Maria Silva', 1000);
+        const conta3 = new ContaBancaria('18365', 'Gael Silva', 6000);
+        conta.transferir(200, conta2);
+        conta.transferir(200, conta3);
+        conta3.transferir(500, conta2);
+        expect(conta.consultarSaldo()).toBe(600);
+        expect(conta2.consultarSaldo()).toBe(1700);
+        expect(conta3.consultarSaldo()).toBe(5700);
+    });
+
 });
 
 
