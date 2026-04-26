@@ -21,10 +21,14 @@ describe('ContaBancaria', () => {
     it('Deve retornar o valor final com o deposito', () => {
         conta.depositar(300);
         expect(conta.consultarSaldo()).toBe(1300);
-        
+
     });
 
+    it('Deve retornar o valor correto após o saque', () => { 
+        conta.sacar(500)
+        expect(conta.consultarSaldo()).toBe(500)
 
+    });
 
 });
 
