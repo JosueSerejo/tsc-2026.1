@@ -11,9 +11,20 @@ describe('ContaBancaria', () => {
     it('Deve criar a conta com os dados corretos', () => { 
         expect(conta.numero).toBe('12345');
         expect(conta.titular).toBe('João Silva');
-        expect(conta.consultarSaldo()).toBe(1000);
-
     });
+
+    it('Deve retornar o saldo correto', () => { 
+        expect(conta.consultarSaldo()).toBe(1000);
+    });
+
+
+    it('Deve retornar o valor final com o deposito', () => {
+        conta.depositar(300);
+        expect(conta.consultarSaldo()).toBe(1300);
+        
+    });
+
+
 
 });
 
