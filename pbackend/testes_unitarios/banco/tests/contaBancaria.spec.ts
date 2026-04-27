@@ -85,8 +85,11 @@ describe('ContaBancaria - Testes de Erro', () => {
         expect(() => conta.transferir(1500, conta2)).toThrow('Saldo insuficiente para saque.');
     });
 
-    
-
+    it('Não deve ser possível transferir valor negativo ou zero', () => {
+        const conta2 = new ContaBancaria('12365', 'Maria Silva', 1000);
+        expect(() => conta.transferir(-100, conta2)).toThrow('O valor do saque deve ser maior que zero.');
+        expect(() => conta.transferir(0, conta2)).toThrow('O valor do saque deve ser maior que zero.');
+    });
 
 });
 
