@@ -61,7 +61,17 @@ describe('ContaBancaria - Testes de Erro', () => {
     it('Não deve ser possível criar conta com saldo inicial negativo', () => {
         expect(() => new ContaBancaria('54321', 'Maria Silva', -100)).toThrow('O saldo inicial não pode ser negativo.');
     });
-    
+
+    it('Não deve ser possível depositar valor negativo ou zero', () => {
+        expect(() => conta.depositar(-50)).toThrow('O valor do depósito deve ser maior que zero.');
+        expect(() => conta.depositar(0)).toThrow('O valor do depósito deve ser maior que zero.');
+    });
+
+    it('Não deve ser possível sacar valor negativo ou zero', () => {
+        expect(() => conta.sacar(-50)).toThrow('O valor do saque deve ser maior que zero.');
+        expect(() => conta.sacar(0)).toThrow('O valor do saque deve ser maior que zero.');
+    });
+     
     it('Não deve ser possível transferir para a mesma conta', () => {
         expect(() => conta.transferir(100, conta)).toThrow('Não é possível transferir para a mesma conta.');
     });
