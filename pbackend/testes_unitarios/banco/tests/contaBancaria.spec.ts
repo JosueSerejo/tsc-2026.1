@@ -80,6 +80,11 @@ describe('ContaBancaria - Testes de Erro', () => {
         expect(() => conta.sacar(1500)).toThrow('Saldo insuficiente para saque.');
     });
 
+    it('Não deve ser possível transferir valor maior que o saldo', () => {
+        const conta2 = new ContaBancaria('12365', 'Maria Silva', 1000);
+        expect(() => conta.transferir(1500, conta2)).toThrow('Saldo insuficiente para saque.');
+    });
+
     
 
 
