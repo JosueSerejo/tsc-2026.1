@@ -71,9 +71,13 @@ describe('ContaBancaria - Testes de Erro', () => {
         expect(() => conta.sacar(-50)).toThrow('O valor do saque deve ser maior que zero.');
         expect(() => conta.sacar(0)).toThrow('O valor do saque deve ser maior que zero.');
     });
-     
+
     it('Não deve ser possível transferir para a mesma conta', () => {
         expect(() => conta.transferir(100, conta)).toThrow('Não é possível transferir para a mesma conta.');
+    });
+
+    it('Não deve ser possível sacar valor maior que o saldo', () => {
+        expect(() => conta.sacar(1500)).toThrow('Saldo insuficiente para saque.');
     });
 
     
