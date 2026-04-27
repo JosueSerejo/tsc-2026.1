@@ -49,6 +49,15 @@ describe('ContaBancaria', () => {
         expect(conta3.consultarSaldo()).toBe(5700);
     });
 
+    it('Deve retornar o valor correto após múltiplas operações', () => {
+        const conta2 = new ContaBancaria('12365', 'Maria Silva', 1000);
+        conta.depositar(500);
+        conta.sacar(200);
+        conta.transferir(300, conta2);
+        expect(conta.consultarSaldo()).toBe(1000);
+        expect(conta2.consultarSaldo()).toBe(1300);
+    });
+
 });
 
 describe('ContaBancaria - Testes de Erro', () => {
