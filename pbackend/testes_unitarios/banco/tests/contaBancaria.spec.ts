@@ -51,4 +51,20 @@ describe('ContaBancaria', () => {
 
 });
 
+describe('ContaBancaria - Testes de Erro', () => {
+    let conta: ContaBancaria;
+    
+    beforeEach(() => {
+        conta = new ContaBancaria('12345', 'João Silva', 1000);
+    });
+    
+    it('Não deve ser possível transferir para a mesma conta', () => {
+        expect(() => conta.transferir(100, conta)).toThrow('Não é possível transferir para a mesma conta.');
+    });
+
+
+});
+
+
+
 
