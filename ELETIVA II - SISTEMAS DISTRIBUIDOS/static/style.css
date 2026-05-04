@@ -1,0 +1,84 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    gap: 20px;
+    background-color: #74a2d6;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    width: 800px;
+}
+
+.left-panel, .right-panel {
+    flex: 1;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+h3, h4 {
+    margin-top: 0;
+    color: #333;
+}
+
+.section {
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    padding-bottom: 10px;
+}
+
+.client-box {
+    background: rgba(255,255,255,0.5);
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 4px;
+}
+
+.client-box label {
+    display: block;
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+
+.client-box input {
+    width: 80%;
+    margin-bottom: 5px;
+}
+
+button {
+    cursor: pointer;
+    padding: 5px 15px;
+    background: white;
+    border: 1px solid #999;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+button:hover {
+    background: #eee;
+}
+
+.results p {
+    margin: 8px 0;
+    font-size: 0.95em;
+}
+
+.order-section {
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+#server-time, #logical-clock {
+    color: #d00;
+    font-weight: bold;
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sincronização de Processos Distribuídos</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="left-panel">
+            <div class="section">
+                <h3>Criar Servidor</h3>
+                <button onclick="resetServer()">Criar</button>
+            </div>
+
+            <div class="section">
+                <h3>Criar Cliente</h3>
+                <button onclick="addClient()">Criar</button>
+            </div>
+
+            <div id="client-forms">
+                <!-- Formulários dos clientes aparecerão aqui -->
+            </div>
+        </div>
+
+        <div class="right-panel">
+            <h3>Servidor</h3>
+            <p>Hora local: <span id="server-time">--:--:--</span></p>
+            <button onclick="synchronize()">Sincronizar</button>
+
+            <div class="results">
+                <p>Hora Local Cliente 1: <span id="res-c1-time">---</span></p>
+                <p>Hora Local Cliente 2: <span id="res-c2-time">---</span></p>
+                <p>Hora Local Cliente 3: <span id="res-c3-time">---</span></p>
+                
+                <p><strong>Clock Lógico:</strong> <span id="logical-clock">---</span></p>
+                
+                <p>Ajuste do clock (S): <span id="adj-s">---</span></p>
+                <p>Ajuste do clock (C1): <span id="adj-c1">---</span></p>
+                <p>Ajuste do clock (C2): <span id="adj-c2">---</span></p>
+                <p>Ajuste do clock (C3): <span id="adj-c3">---</span></p>
+
+                <div class="order-section">
+                    <h4>Ordem de envio:</h4>
+                    <p>1º processo a enviar: <span id="order-1">?</span></p>
+                    <p>2º processo a enviar: <span id="order-2">?</span></p>
+                    <p>3º processo a enviar: <span id="order-3">?</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../static/script.js"></script>
+</body>
+</html>
