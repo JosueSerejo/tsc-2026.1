@@ -5,8 +5,8 @@ class Leilao:
         self.lances = []
     
     def propor(self, lance):
-        if self.lances is None or not self.lances[-1].get_usuario() == lance.get_usuario().get_nome():
-            self.lances(lance)
+        if not self.lances or self.lances[-1].get_usuario() != lance.get_usuario():
+            self.lances.append(lance)
     
     def get_produto(self):
         return self.produto

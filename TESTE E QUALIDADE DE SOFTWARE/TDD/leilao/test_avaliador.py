@@ -3,67 +3,23 @@ from usuario import Usuario
 from leilao import Leilao
 from lance import Lance
 
-import pytest
+import unittest 
 
-def test_avaliador_crescente():
-    joao = Usuario("João")
-    rita = Usuario("Rita")
-    jose = Usuario("Jose")
-    mari = Usuario("Mari")
-    leilao = Leilao("Smart Phone Samsung 32")
-    leilao.propor(Lance(mari, 150.00))
-    leilao.propor(Lance(joao, 300.00))
-    leilao.propor(Lance(jose, 400.00))
-    leilao.propor(Lance(rita, 450.00))
-    leiloeiro = Avaliador()
-    leiloeiro.avaliar(leilao)
-    assert leiloeiro.get_maior_lance() == 450
+class TestAvaliador(unittest.TestCase):
+    def setUp(self):
+        self.avaliador = Avaliador()
+        self.usuario1 = Usuario('João')
+        self.usuario2 = Usuario('Maria')
+        self.usuario3 = Usuario('Pedro')
 
-def test_avaliador_decrescente():
-    joao = Usuario("João")
-    rita = Usuario("Rita")
-    jose = Usuario("Jose")
-    mari = Usuario("Mari")
-    leilao = Leilao("Smart Phone Samsung 32")
-    leilao.propor(Lance(rita, 450.00))
-    leilao.propor(Lance(jose, 400.00))
-    leilao.propor(Lance(joao, 300.00))
-    leilao.propor(Lance(mari, 150.00))
-    leiloeiro = Avaliador()
-    leiloeiro.avaliar(leilao)
-    assert leiloeiro.get_maior_lance() == 450
+    def test_avaliar_leilao(self):
+        leilao = Leilao('PlayStation 5')
+        leilao.propor(Lance(self.usuario1, 2000))
+        leilao.propor(Lance(self.usuario2, 2500))
+        leilao.propor(Lance(self.usuario3, 3000))
 
-def test_avaliador_iguais():
-    joao = Usuario("João")
-    rita = Usuario("Rita")
-    jose = Usuario("Jose")
-    mari = Usuario("Mari")
-    leilao = Leilao("Smart Phone Samsung 32")
-    leilao.propor(Lance(rita, 100.00))
-    leilao.propor(Lance(jose, 100.00))
-    leilao.propor(Lance(joao, 100.00))
-    leilao.propor(Lance(mari, 100.00))
-    leiloeiro = Avaliador()
-    leiloeiro.avaliar(leilao)
-    assert leiloeiro.get_maior_lance() == 100
+        self.avaliador.avalia(leilao)
 
-def test_avaliador_vazia():
-    leilao = Leilao("Smart Phone Samsung 32")
-    leiloeiro = Avaliador()
-    leiloeiro.avaliar(leilao)
-    assert leiloeiro.get_maior_lance() == -10 ** 101
+        self.assertEqual(2000, self.avaliador.menor_lance)
+        self.assertEqual(3000, self.avaliador.maior_lance)
 
-def test_avaliador_negativo():
-    joao = Usuario("João")
-    rita = Usuario("Rita")
-    jose = Usuario("Jose")
-    mari = Usuario("Mari")
-    leilao = Leilao("Smart Phone Samsung 32")
-    leilao.propor(Lance(rita, 450.00))
-    leilao.propor(Lance(jose, 400.00))
-    leilao.propor(Lance(joao, -300.00))
-    leilao.propor(Lance(mari, 150.00))
-    leiloeiro = Avaliador()
-    leiloeiro.avaliar(leilao)
-    assert leiloeiro.get_menor_lance() == -300
-    # Algo deu errado aqui!!

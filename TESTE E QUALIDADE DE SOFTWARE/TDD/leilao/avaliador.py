@@ -5,6 +5,9 @@ class Avaliador:
         self.menor_lance = 10 ** 101     # Um número muito grande
         self.tres_maiores = []
     		
+    def avalia(self, leilao):
+        self.avaliar(leilao)
+
     def avaliar(self, leilao):
         for lance in leilao.lances:
             if lance.valor > self.maior_lance:

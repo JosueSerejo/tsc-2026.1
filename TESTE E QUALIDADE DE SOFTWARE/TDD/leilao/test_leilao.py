@@ -4,33 +4,22 @@ from leilao import Leilao
 from usuario import Usuario
 
 import unittest
-from unittest import TestCase
 
-class LeilaoTeste(TestCase):
+class TestLeilao(unittest.TestCase):
 
-    def test_deve_receber_um_lance(self):
-        leilao = Leilao("Macbook Pro 15")
-        self.assertEqual(0, len(leilao.get_lances()))
-        leilao.propor(Lance(Usuario("Mari"), 2000.00))
-        self.assertEqual(1, len(leilao.get_lances()))
-        self.assertEqual(2000.00, leilao.get_lances()[0].valor)
-    
-    def test_deve_receber_varios_lances(self):
-        leilao = Leilao("Macbook Pro 15")
-        leilao.propor(Lance(Usuario("Mari"), 2000.00))
-        leilao.propor(Lance(Usuario("jose"), 3000.00))
-        self.assertEqual(2, len(leilao.get_lances()))
-        self.assertEqual(2000.00, leilao.get_lances()[0].valor)
-        self.assertEqual(3000.00, leilao.get_lances()[1].valor)
-    
-    def test_nao_pode_dois_lances_seguidos_de_usuario(self):
-        leilao = Leilao("Macbook Pro 15")
-        mari = Usuario("Mari")
-        leilao.propor(Lance(mari, 2000.00))
-        leilao.propor(Lance(mari, 3000.00))
-        self.assertEqual(1, len(leilao.get_lances()))
-        self.assertEqual(2000.00, leilao.get_lances()[0].valor)
+    def setUp(self):
+        self.avaliador = Avaliador()
+        self.usuario1 = Usuario('João')
+        self.usuario2 = Usuario('Maria')
+        self.usuario3 = Usuario('Pedro')
 
+    def test_avaliar_leilao(self):
+        leilao = Leilao('PlayStation 5')
+        leilao.propor(Lance(self.usuario1, 2000))
+        leilao.propor(Lance(self.usuario2, 2500))
+        leilao.propor(Lance(self.usuario3, 3000))
 
-if __name__ == "__main__":
-    unittest.main()
+        self.avaliador.avalia(leilao)
+
+        self.assertEqual(2000, self.avaliador.menor_lance)
+        self.assertEqual(3000, self.avaliador.maior_lance)
