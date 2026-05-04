@@ -2,6 +2,8 @@ from avaliador import Avaliador
 from usuario import Usuario
 from leilao import Leilao
 from lance import Lance
+
+
 joao = Usuario("João")
 rita = Usuario("Rita")
 jose = Usuario("Jose")
