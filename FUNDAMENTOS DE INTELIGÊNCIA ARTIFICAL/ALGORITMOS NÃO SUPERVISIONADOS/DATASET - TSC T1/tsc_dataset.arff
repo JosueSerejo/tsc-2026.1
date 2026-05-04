@@ -1,0 +1,64 @@
+@RELATION dataset_tsc_t1
+
+@ATTRIBUTE "Nome" string
+@ATTRIBUTE "Idade" {"18 - 20","21 - 22","23 -24","> 24"}
+@ATTRIBUTE "Altura" string
+@ATTRIBUTE "Sexo" {"Masculino","Feminino"}
+@ATTRIBUTE "Cor da pele" {"Branca","Parda","Negra"}
+@ATTRIBUTE "Cabelo1" string
+@ATTRIBUTE "Cabelo2" string
+@ATTRIBUTE "Usa oculos ou lente" {"Sim","Não"}
+@ATTRIBUTE "Genero de Filme ou Serie favorito" string
+@ATTRIBUTE "Genero musical favorito" string
+@ATTRIBUTE "Hobby favorito" string
+@ATTRIBUTE "Linguagem de Programacao favorita" string
+@ATTRIBUTE "SO Desktop utilizado" string
+@ATTRIBUTE "SO Mobile utilizado" string
+@ATTRIBUTE "IDE favorito" string
+@ATTRIBUTE "Navegador favorito" string
+@ATTRIBUTE "Stack desejada" string
+@ATTRIBUTE "Forma este ano" {"Sim","Não"}
+@ATTRIBUTE "Escola Publica" {"Sim","Não"}
+@ATTRIBUTE "Ja tem graduação" {"Sim","Não"}
+@ATTRIBUTE "Relacionamento afetivo" {"Sim","Não"}
+@ATTRIBUTE "Trabalhando" {"Sim","Não"}
+@ATTRIBUTE "Estado Civil" string
+@ATTRIBUTE "Cidade de Origem" string
+@ATTRIBUTE "Mora com os pais" {"Sim","Não"}
+@ATTRIBUTE "Tem irmaos" {"Sim","Não"}
+@ATTRIBUTE "Tem animal" {"Sim","Não"}
+@ATTRIBUTE "Tem CNH" {"Sim","Não"}
+@ATTRIBUTE "Dirige" {"Sim","Não"}
+
+@DATA
+"ADONIAS PEREIRA DOS SANTOS TERCEIRO","18 - 20","1,71 - 1,80","Masculino","Parda","Curto","Ondulado","Sim","Aventura","Rock","Videogame","Python","Windows","IOS","VS Code","Google Chrome","Full Stack","Sim","Não","Não","Não","Não","Solteiro(a)","Tutóia","Não","Sim","Não","Não","Não"
+
+"ALAN RODRIGUES DE CASTRO","> 24","1,61, - 1,70","Masculino","Branca","Curto","Liso","Sim","Fantasia","Rock","Desenhar","Python","Windows","Android","VS Code","Brave","Front-End","Sim","Sim","Não","Não","Sim","Solteiro(a)","Piracuruca","Sim","Sim","Sim","Não","Não"
+"CRISTIAN BRANDAO TAVARES","21 - 22","1,61, - 1,70","Masculino","Parda","Curto","Ondulado","Não","Ação","Ecletico","Treinar","Python","Windows","Android","VS Code","Brave","Full-Stack","Sim","Sim","Não","Sim","Sim","Solteiro(a)","Parnaíba","Sim","Sim","Sim","Não","Sim"
+"DENIS DO NASCIMENTO RODRIGUES","> 24","1,71 - 1,80","Masculino","Negra","Curto","Cacheado/Encaracolado","Não","Animação","Rock","Jogos","Typescript","Windows","Android","VS Code","Brave","Back-End","Sim","Sim","Não","Não","Sim","Solteiro(a)","Parnaíba","Sim","Sim","Sim","Não","Sim"
+"ENZO DAMASCENO FALCAO","18 - 20","1,61, - 1,70","Masculino","Parda","Curto","Liso","Não","Ação","Gospel","Futebol","Python","Linux","Android","VS Code","Brave","Full-Stack","Sim","Não","Não","Sim","Sim","Solteiro(a)","Parnaíba","Sim","Sim","Sim","Sim","Sim"
+"ERIC SILVA PATRICIO","18 - 20","1,71 - 1,80","Masculino","Parda","Curto","Cacheado/Encaracolado","Sim","Romance","MPB","Jogar","Python","Windows","Android","VS Code","Brave","Back-End","Sim","Sim","Não","Sim","Sim","Solteiro(a)","Água Doce","Sim","Sim","Sim","Não","Não"
+"ERICK VIEIRA DA SILVA COSTA","18 - 20","1,61, - 1,70","Masculino","Branca","Curto","Liso","Sim","Fantasia","Pop","Assistir","Python","Linux","Android","VS Code","Firefox","Full-Stack","Sim","Não","Não","Não","Sim","Solteiro(a)","Parnaíba","Sim","Não","Sim","Não","Sim"
+"FABRICIO FONTENELE VIEIRA","18 - 20","1,71 - 1,80","Masculino","Branca","Curto","Liso","Sim","Fantasia","Hip hop","Jogar","Java","Linux","Android","VS Code","Brave","Back-End","Sim","Sim","Não","Não","Sim","Solteiro(a)","Parnaíba","Sim","Sim","Sim","Não","Não"
+"FELIPE MARTINS DOS SANTOS SILVA","21 - 22","1,61, - 1,70","Masculino","Parda","Curto","Ondulado","Sim","Animação","Rock","Jogar jogos virtuais","Python","Windows","Android","VS Code","Brave","Full-Stack","Sim","Sim","Não","Não","Sim","Solteiro(a)","Parnaíba","Sim","Sim","Sim","Não","Sim"
+"FRANCISCO ALVES RIBEIRO NETO","18 - 20","1,61, - 1,70","Masculino","Branca","Curto","Liso","Sim","Ficção Científica","MPB","Jogar","Python","Linux","Android","VS Code","Edge","Back-End","Sim","Não","Não","Sim","Sim","Solteiro(a)","Parnaíba","Sim","Sim","Sim","Sim","Sim"
+"FRANCISCO OSMAR SANTOS SILVA","18 - 20","1,71 - 1,80","Masculino","Branca","Curto","Ondulado","Não","Terror","Rock","Jogar","Typescript","Linux","IOS","VS Code","Google Chrome","Full-Stack","Sim","Sim","Não","Sim","Sim","Solteiro(a)","Parnaíba","Sim","Sim","Sim","Sim","Sim"
+"GABRIEL LIMA SILVA OLIVEIRA","18 - 20","1,71 - 1,80","Masculino","Parda","Curto","Ondulado","Sim","Ação","Pop","Programar","Typescript","Windows","Android","VS Code","Google Chrome","Full-Stack","Sim","Sim","Não","Sim","Sim","Solteiro(a)","Parnaíba","Sim","Não","Sim","Não","Não"
+"GABRIEL OLIVEIRA PINTO","18 - 20","1,71 - 1,80","Masculino","Branca","Curto","Ondulado","Não","Fantasia","Rock","Jogar","Typescript","Windows","Android","VS Code","Brave","Full-Stack","Sim","Sim","Não","Não","Sim","Solteiro(a)","Luzilândia","Não","Sim","Sim","Não","Não"
+"HENRIQUE VERAS CORDEIRO","18 - 20",">1,80","Masculino","Branca","Curto","Liso","Sim","Ficção Científica","MPB","Desenho","Python","Windows","Android","VS Code","Microsoft Edge","Full-Stack","Sim","Não","Não","Não","Não","Solteiro(a)","Parnaíba","Sim","Sim","Sim","Não","Não"
+"IRAPUAM JUNIO DA SILVA SANTOS","21 - 22","1,50 - 1,60","Masculino","Branca","Curto","Cacheado/Encaracolado","Sim","Terror","Eurobeat","procastinar(jogar jogos)","lua","Windows","Android","bloco de notas","Brave","Full-Stack","Não","Sim","Não","Não","Sim","Solteiro(a)","Distrito Federal","Sim","Não","Sim","Não","Não"
+"IVANILDO DOS SANTOS ARAUJO","> 24","1,61, - 1,70","Masculino","Parda","Curto","Liso","Não","Terror","Rock","Games","Typescript","Windows","Android","VS Code","Google Chrome","Full-Stack","Não","Sim","Não","Sim","Não","Solteiro(a)","Parnaíba","Sim","Sim","Sim","Não","Sim"
+"JORDAN FERNANDES DE CARVALHO","21 - 22","1,71 - 1,80","Masculino","Parda","Curto","Ondulado","Sim","Terror","Rock","Jogar","Python","Windows","Android","VS Code","Google Chrome","Front-End","Sim","Não","Não","Não","Sim","Solteiro(a)","Parnaíba","Sim","Não","Sim","Não","Não"
+"JOSE MARANHAO DA SILVA NETO","21 - 22",">1,80","Masculino","Negra","Curto","Cacheado/Encaracolado","Não","Terror","Rock","Sinuca","Go","Linux","Android","VS Code","Google Chrome","Back-End","Não","Sim","Não","Não","Sim","Solteiro(a)","Araioses","Não","Não","Não","Não","Sim"
+"JOSE WILK SOUZA LIMA","18 - 20","1,71 - 1,80","Masculino","Branca","Curto","Ondulado","Sim","Ação","Forró","Ver tiktok","Python","Windows","IOS","VS Code","Google Chrome","Full-Stack","Sim","Sim","Não","Não","Sim","Solteiro(a)","Parnaíba","Sim","Sim","Sim","Sim","Sim"
+"KAUA NERES MOURA","18 - 20","1,61, - 1,70","Masculino","Negra","Curto","Cacheado/Encaracolado","Não","Animação","Rap","Jiu-jitsu","Typescript","Windows","Android","VS Code","Brave","Full-Stack","Sim","Sim","Não","Não","Sim","Solteiro(a)","Ilha Grande","Sim","Sim","Sim","Sim","Sim"
+"LUIS FELIPE FERREIRA MARTINS","18 - 20","1,61, - 1,70","Masculino","Branca","Curto","Cacheado/Encaracolado","Não","Comédia","Mpb","Futebol","Python","Windows","Android","VS Code","Google Chrome","Back-End","Sim","Não","Não","Sim","Sim","Solteiro(a)","Anapurus","Não","Sim","Sim","Não","Sim"
+"MARIANA DA MOTA PINHO","18 - 20","1,61, - 1,70","Feminino","Parda","Curto","Liso","Sim","Drama","Pop","Ler","Typescript","Linux","Android","VS Code","Google Chrome","Full-Stack","Sim","Sim","Não","Sim","Sim","Solteiro(a)","Cocal","Não","Sim","Sim","Não","Sim"
+"MAYARA LIMA MIRANDA","> 24","1,61, - 1,70","Feminino","Negra","Curto","Ondulado","Não","Romance","Sertanejo","Ler","Python","Linux","Android","VS Code","Firefox","Front-End","Sim","Sim","Não","Sim","Sim","Casado(a)","Parnaíba","Não","Sim","Sim","Não","Sim"
+"PAULO HENRIQUE ALVES VIEIRA","18 - 20","1,61, - 1,70","Masculino","Branca","Curto","Ondulado","Não","Aventura","Rock","Desenhar","C","Linux","Android","Nvim","Brave","Full-Stack","Sim","Não","Não","Não","Sim","Solteiro(a)","Parnaíba","Sim","Sim","Sim","Não","Sim"
+"RICHARD COSTA DE BRITO","21 - 22",">1,80","Masculino","Parda","Curto","Cacheado/Encaracolado","Não","Drama","Rock","Tocar guitarra","Python","Windows","Android","VS Code","Google Chrome","Full-Stack","Sim","Sim","Não","Não","Sim","Solteiro(a)","Teresina","Sim","Sim","Não","Não","Não"
+"RUAN PEDRO DE ARAUJO ANJOS","18 - 20","1,71 - 1,80","Masculino","Negra","Curto","Cacheado/Encaracolado","Não","Ação","Hip Hop","Jogar","TypeScript","Linux","IOS","VS Code","Edge","Full-Stack","Sim","Não","Não","Sim","Sim","Solteiro(a)","Parnaíba","Sim","Não","Sim","Não","Sim"
+"SAMUEL DA PENHA NASCIMENTO","18 - 20",">1,80","Masculino","Parda","Curto","Ondulado","Não","Animação","Pop","Instrumentos","Java","Windows","Android","IntelliJ","Brave","Full-Stack","Sim","Não","Não","Não","Sim","Solteiro(a)","Parnaíba","Sim","Sim","Sim","Sim","Sim"
+"VICTOR EMANOEL LIMA SILVA","23 -24","1,61, - 1,70","Masculino","Negra","Curto","Cacheado/Encaracolado","Não","Ficção Científica","Hip Hop","Games","Python","Linux","Android","VS Code","Brave","Full-Stack","Sim","Sim","Não","Sim","Sim","Solteiro(a)","Santa quitéria do maranhão","Não","Sim","Não","Sim","Sim"
+"VITOR DOS SANTOS CORREIA","18 - 20","1,71 - 1,80","Masculino","Branca","Curto","Ondulado","Sim","Ficção Científica","Trap/rap","Assistir séries","Java","Windows","Android","Visual Studio","Google Chrome","Back-End","Sim","Sim","Não","Não","Sim","Solteiro(a)","São Paulo","Sim","Sim","Sim","Sim","Sim"
+"WILLAMY JOSUE SANTOS SEREJO","> 24","1,61, - 1,70","Masculino","Negra","Curto","Cacheado/Encaracolado","Não","Terror","Pop","Cantar","Python","Windows","Android","VS Code","Opera GX","Front-End","Sim","Não","Sim","Sim","Sim","Solteiro(a)","Parnaíba","Não","Sim","Não","Não","Sim"

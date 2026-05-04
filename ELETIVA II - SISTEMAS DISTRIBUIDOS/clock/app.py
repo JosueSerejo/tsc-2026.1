@@ -6,7 +6,7 @@ app = Flask(__name__)
 # Estado global para simular o sistema distribuído
 state = {
     "server_time": None,
-    "clients": {}, # {id: {local_time, send_time}}
+    "clients": {},
     "sync_results": None
 }
 
