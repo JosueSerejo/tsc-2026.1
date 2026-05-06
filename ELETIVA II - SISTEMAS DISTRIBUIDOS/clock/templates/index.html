@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sincronização de Processos Distribuídos</title>
-    <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
     <div class="container">
         <div class="left-panel">
             <div class="section">
                 <h3>Criar Servidor</h3>
+                <label>Hora inicial:</label>
+                <input type="text" id="server-init-time" value="10:00" style="width: 60px;">
                 <button onclick="resetServer()">Criar</button>
             </div>
 
@@ -26,7 +28,7 @@
 
         <div class="right-panel">
             <h3>Servidor</h3>
-            <p>Hora local: <span id="server-time">--:--:--</span></p>
+            <p>Hora local: <span id="server-time">--:--</span></p>
             <button onclick="synchronize()">Sincronizar</button>
 
             <div class="results">
@@ -51,6 +53,6 @@
         </div>
     </div>
 
-    <script src="../static/script.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 </html>
