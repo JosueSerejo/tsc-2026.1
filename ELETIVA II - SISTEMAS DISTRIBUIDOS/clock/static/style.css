@@ -3,9 +3,11 @@ body {
     background-color: #f0f0f0;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     min-height: 100vh;
     margin: 0;
+    padding: 30px 0;
+    box-sizing: border-box;
 }
 
 .container {
@@ -15,7 +17,7 @@ body {
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    width: 800px;
+    width: 860px;
 }
 
 .left-panel, .right-panel {
@@ -67,18 +69,66 @@ button:hover {
     background: #eee;
 }
 
-.results p {
-    margin: 8px 0;
+/* ── Result blocks ── */
+.result-block {
+    margin-top: 18px;
+    padding: 12px;
+    background: rgba(255,255,255,0.35);
+    border-radius: 6px;
+}
+
+.block-title {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin: 0 0 10px 0;
     font-size: 0.95em;
+    color: #1a3a5c;
+    border-bottom: 1px solid rgba(0,0,0,0.15);
+    padding-bottom: 6px;
 }
 
-.order-section {
-    margin-top: 20px;
-    padding-top: 10px;
-    border-top: 1px solid rgba(0,0,0,0.1);
+.block-title svg {
+    flex-shrink: 0;
+    color: #1a3a5c;
 }
 
+/* ── Tables ── */
+.info-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9em;
+}
+
+.info-table th {
+    background: rgba(0,0,0,0.1);
+    text-align: left;
+    padding: 5px 8px;
+    color: #222;
+}
+
+.info-table td {
+    padding: 5px 8px;
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+
+.info-table tr:last-child td {
+    border-bottom: none;
+}
+
+/* ── Sync inline text ── */
+.result-block p {
+    margin: 6px 0;
+    font-size: 0.92em;
+}
+
+/* ── Highlighted values ── */
 #server-time, #logical-clock {
-    color: #d00;
+    color: #c00;
     font-weight: bold;
+}
+
+#order-1, #order-2, #order-3 {
+    font-weight: bold;
+    color: #1a5c3a;
 }
