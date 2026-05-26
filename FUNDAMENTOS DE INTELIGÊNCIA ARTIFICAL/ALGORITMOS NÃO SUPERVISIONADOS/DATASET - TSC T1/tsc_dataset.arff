@@ -18,7 +18,7 @@
 
 @ATTRIBUTE "Genero musical favorito" {"Rock", "Ecletico", "Gospel", "Pop", "MPB", "Hip-Hop", "Eurobeat", "Forró", "Rap", "Sertanejo", "Trap"}
 
-@ATTRIBUTE "Hobby favorito" {"Assistir séries", "Jogar", "Cantar", "Games", "Instrumentos", "procrastinar", "Assistir", "Desenhar", "Futebol", "Tocar guitarra", "Jiu-jitsu", "Ler", "Videogame", "Sinuca", "Programar", "Ver tiktok", "Desenho", "Treinar"}
+@ATTRIBUTE "Hobby favorito" {"Jogar", "Cantar", "Games", "Instrumentos", "procrastinar", "Assistir", "Desenhar", "Futebol", "Tocar guitarra", "Jiu-jitsu", "Ler", "Videogame", "Sinuca", "Programar", "Ver tiktok", "Desenho", "Treinar"}
 
 @ATTRIBUTE "Linguagem de Programacao favorita" {"Python", "Typescript", "Java", "Lua", "Go", "C"}
 
@@ -118,6 +118,6 @@
 
 "VICTOR EMANOEL","23 -24","1,61 - 1,70","Masculino","Negra","Cacheado/Encaracolado","Não","Ficção Científica","Hip-Hop","Games","Python","Linux","Android","VS Code","Brave","Full-Stack","Sim","Sim","Não","Sim","Sim","Solteiro(a)","Santa Quitéria do Maranhão","Não","Sim","Não","Sim","Sim"
 
-"VITOR DOS SANTOS","18 - 20","1,71 - 1,80","Masculino","Branca","Ondulado","Sim","Ficção Científica","Trap","Assistir séries","Java","Windows","Android","Visual Studio","Chrome","Back-End","Sim","Sim","Não","Não","Sim","Solteiro(a)","São Paulo","Sim","Sim","Sim","Sim","Sim"
+"VITOR DOS SANTOS","18 - 20","1,71 - 1,80","Masculino","Branca","Ondulado","Sim","Ficção Científica","Trap","Assistir","Java","Windows","Android","Visual Studio","Chrome","Back-End","Sim","Sim","Não","Não","Sim","Solteiro(a)","São Paulo","Sim","Sim","Sim","Sim","Sim"
 
 "WILLAMY JOSUE","> 24","1,61 - 1,70","Masculino","Negra","Cacheado/Encaracolado","Não","Terror","Pop","Cantar","Python","Windows","Android","VS Code","Opera GX","Front-End","Sim","Não","Sim","Sim","Sim","Solteiro(a)","Parnaíba","Não","Sim","Não","Não","Sim"
